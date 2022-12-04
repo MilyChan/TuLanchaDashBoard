@@ -46,7 +46,7 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="839.0" prefWidth="715.0" style="-fx-background-radius: 30; -fx-border-radius: 30;">
                <children>
-                  <Label text="Registro de clientes" textFill="WHITE">
+                  <Label text="Registro de clientes">
                      <font>
                         <Font name="Georgia Bold" size="17.0" />
                      </font></Label>
@@ -54,14 +54,15 @@
                     <columns>
                         <TableColumn fx:id="column_id" prefWidth="167.0" text="ID" />
                       <TableColumn fx:id="column_nombre" prefWidth="295.0" text="Nombre" />
-                      <TableColumn fx:id="column_apellidos" prefWidth="207.0" text="Apellidos" />
+                      <TableColumn fx:id="column_apellidos" prefWidth="281.0" resizable="false" text="Apellidos" />
+                        <TableColumn fx:id="column_genero" prefWidth="71.0" resizable="false" text="Genero" />
                     </columns>
-                     <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                     </columnResizePolicy>
                      <VBox.margin>
                         <Insets left="5.0" right="5.0" />
                      </VBox.margin>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
                   </TableView>
                   <LineChart fx:id="Graf2LineChart" legendSide="TOP" prefHeight="416.0" prefWidth="705.0" style="-fx-background-color: #fff; -fx-background-radius: 30; -fx-border-radius: 30;" title="A ESCOGER">
                     <xAxis>

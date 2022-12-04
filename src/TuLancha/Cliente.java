@@ -13,14 +13,16 @@ public class Cliente {
     private String ID;
     private String nombre;
     private String apellidos;
+    private char genero;
 
     public Cliente() {
     }
 
-    public Cliente(String ID, String nombre, String apellidos) {
+    public Cliente(String ID, String nombre, String apellidos, char genero) {
         this.ID = ID;
         this.nombre = nombre;
         this.apellidos = apellidos;
+        this.genero = genero;
     }
 
     public String getID() {
@@ -47,6 +49,14 @@ public class Cliente {
         this.apellidos = apellidos;
     }
 
+    public char getGenero() {
+        return genero;
+    }
+
+    public void setGenero(char genero) {
+        this.genero = genero;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -54,6 +64,7 @@ public class Cliente {
         sb.append("ID=").append(ID);
         sb.append(", nombre=").append(nombre);
         sb.append(", apellidos=").append(apellidos);
+        sb.append(", genero=").append(genero);
         sb.append('}');
         return sb.toString();
     }
