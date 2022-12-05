@@ -20,6 +20,10 @@ public class AccesoDatos {
 
     static ArrayList<Venta> ventas = new ArrayList();
 
+    static int cantMas = 0;
+
+    static int cantFem = 0;
+
     public static void cargarInfoClientes() {
         BufferedReader br = null;
         clientes.clear();
@@ -31,7 +35,7 @@ public class AccesoDatos {
                 String[] atributos = line.split(",");
                 if (!"ID".equals(atributos[0])) {
                     Cliente newClient = new Cliente(atributos[0], atributos[1],
-                            atributos[2] + " "+atributos[3], atributos[4].charAt(0));
+                            atributos[2] + " " + atributos[3], atributos[4].charAt(0));
                     clientes.add(newClient);
                 }
             }
@@ -56,9 +60,7 @@ public class AccesoDatos {
             while ((line = br.readLine()) != null) {
                 String[] atributos = line.split(",");
                 if (!"totalVentas".equals(atributos[0])) {
-                    String[] fecha=atributos[1].split("-");
-                    String mes=  fecha[1];
-                    Venta newVenta = new Venta(atributos[0], Double.valueOf(mes));
+                    Venta newVenta = new Venta(atributos[1], Integer.valueOf(atributos[0]));
                     ventas.add(newVenta);
                 }
             }
@@ -69,6 +71,17 @@ public class AccesoDatos {
                 br.close();
             } catch (IOException ex) {
                 ex.printStackTrace(System.out);
+            }
+        }
+    }
+
+    public static void conteoXgenero() {
+        for (Cliente cliente : clientes) {
+            if(cliente.getGenero()=='F'){
+                cantFem++;
+            }
+            else{
+                cantMas++;
             }
         }
     }
@@ -98,5 +111,4 @@ public class AccesoDatos {
 //            }
 //        }
 //    }
-
 }

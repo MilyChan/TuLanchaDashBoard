@@ -11,9 +11,9 @@ package TuLancha;
 public class Venta {
 
     private String mes;
-    private double totalVentas;
+    private int totalVentas;
 
-    public Venta(String mes, double totalVentas) {
+    public Venta(String mes, int totalVentas) {
         this.mes = mes;
         this.totalVentas = totalVentas;
     }
@@ -26,11 +26,11 @@ public class Venta {
         this.mes = mes;
     }
 
-    public double getTotalVentas() {
+    public int getTotalVentas() {
         return totalVentas;
     }
 
-    public void setTotalVentas(double totalVentas) {
+    public void setTotalVentas(int totalVentas) {
         this.totalVentas = totalVentas;
     }
 

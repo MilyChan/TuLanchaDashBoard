@@ -44,9 +44,9 @@
                   <Insets />
                </opaqueInsets>
             </VBox>
-            <VBox alignment="CENTER" prefHeight="839.0" prefWidth="715.0" style="-fx-background-radius: 30; -fx-border-radius: 30;">
+            <VBox alignment="CENTER_LEFT" prefHeight="839.0" prefWidth="715.0" style="-fx-background-radius: 30; -fx-border-radius: 30;">
                <children>
-                  <Label text="Registro de clientes">
+                  <Label text="Registro de clientes:">
                      <font>
                         <Font name="Georgia Bold" size="17.0" />
                      </font></Label>
@@ -64,7 +64,7 @@
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                      </columnResizePolicy>
                   </TableView>
-                  <LineChart fx:id="Graf2LineChart" legendSide="TOP" prefHeight="416.0" prefWidth="705.0" style="-fx-background-color: #fff; -fx-background-radius: 30; -fx-border-radius: 30;" title="A ESCOGER">
+                  <LineChart fx:id="Graf2LineChart" prefHeight="416.0" prefWidth="705.0" style="-fx-background-color: #fff; -fx-background-radius: 30; -fx-border-radius: 30;" title="A ESCOGER">
                     <xAxis>
                       <CategoryAxis side="BOTTOM" />
                     </xAxis>
